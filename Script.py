@@ -207,7 +207,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/aaryan_sah">{file_name}</a></b>\n\n<b>⚜️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <a href="https://t.me/aaryan_sah">[ ᴀꜱ ᴄɪɴᴇᴍᴀᴀ ]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/as_cinemaamovies">{file_name}</a></b>\n\n<b>⚜️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <a href="https://t.me/as_cinemaamovies">[ ᴀꜱ ᴄɪɴᴇᴍᴀᴀ ]</a></b>"""
 
     
     MOVIE_UPDATE_NOTIFY_TXT = """
