@@ -60,7 +60,7 @@ auth_channels     = environ.get("AUTH_CHANNELS", "-1002606857321 -1002684741994 
 # Payment Configuration
 # ============================
 QR_CODE = environ.get('QR_CODE', 'https://img.odivex.com/img/img_1757100816_0d481124dd.jpg')    # QR code image for payments
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'ɴᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ')    # Owner UPI ID for payments
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'aaryansha@fam')    # Owner UPI ID for payments
 
 STAR_PREMIUM_PLANS = {
     10: "7day",
@@ -120,7 +120,7 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/ASCinemaa_Serials') # Group link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/as_cinemaamovies') # Group link for the bot
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/aaryan_sah') # Owner link for the bot
 UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/as_Cinema_Updates') # Update channel link for the bot
 
