@@ -105,8 +105,8 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/How_to_get_AS_Links/6")   #
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/How_to_get_AS_Links/6")   # Third tutorial link for verification
 
 # Verification (Must Fill All Veriables. Else You Got Error
-SHORTENER_API = environ.get("SHORTENER_API", "") # Shortener API key
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "") # Shortener website
+SHORTENER_API = environ.get("SHORTENER_API", "f582950a9e3a93c84d138586e6fab5a25b934e67") # Shortener API key
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.com") # Shortener website
 
 SHORTENER_API2 = environ.get("SHORTENER_API2", "")  # Shortener API key for second website
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "") # Shortener website for second website
@@ -120,9 +120,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Movie_Provider_group') # Group link for the bot
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Movieroll_Owner') # Owner link for the bot
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+-dkKSAGoUf4wZGFl') # Update channel link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+1CRi7dMEQhU0Nzk9') # Group link for the bot
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Durgesh_9ty') # Owner link for the bot
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/Pixell_Pulse') # Update channel link for the bot
 
 # ============================
 # User Configuration
