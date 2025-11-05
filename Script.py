@@ -211,7 +211,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/Movie_Provider_group">{file_name}</a></b>\n\n<b>⚜️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <a href="https://t.me/Movie_Provider_group">[ Movɪeʀoll ]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/Pixell_Pulse">{file_name}</a></b>\n\n<b>⚜️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <a href="https://t.me/Pixell_Pulse">[ Pixell Pulse ☠️ ]</a></b>"""
 
     
     MOVIE_UPDATE_NOTIFY_TXT = """
