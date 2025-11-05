@@ -108,8 +108,8 @@ TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/How_to_get_AS_Links/6")   #
 SHORTENER_API = environ.get("SHORTENER_API", "f582950a9e3a93c84d138586e6fab5a25b934e67") # Shortener API key
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.com") # Shortener website
 
-SHORTENER_API2 = environ.get("SHORTENER_API2", "")  # Shortener API key for second website
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "") # Shortener website for second website
+SHORTENER_API2 = environ.get("SHORTENER_API2", "f582950a9e3a93c84d138586e6fab5a25b934e67")  # Shortener API key for second website
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "shortxlinks.com") # Shortener website for second website
 
 SHORTENER_API3 = environ.get("SHORTENER_API3", "")  
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "") # Shortener website for third website
