@@ -95,7 +95,7 @@ LANDSCAPE_POSTER = bool(environ.get('LANDSCAPE_POSTER', True)) # Shows landscape
 # ============================
 # Verification Settings
 # ============================
-IS_VERIFY = is_enabled('IS_VERIFY', False)  # Verification On (True) / Off (False)
+IS_VERIFY = is_enabled('IS_VERIFY', True)  # Verification On (True) / Off (False)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002521835919')) #Verification Channel Id 
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002521835919')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
@@ -105,8 +105,8 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/How_to_get_AS_Links/6")   #
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/How_to_get_AS_Links/6")   # Third tutorial link for verification
 
 # Verification (Must Fill All Veriables. Else You Got Error
-SHORTENER_API = environ.get("SHORTENER_API", "") # Shortener API key
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "") # Shortener website
+SHORTENER_API = environ.get("SHORTENER_API", "c7d26524bec5a47ef34454ed1348511f4124bda6") # Shortener API key
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "http://shortxlinks.com") # Shortener website
 
 SHORTENER_API2 = environ.get("SHORTENER_API2", "")  # Shortener API key for second website
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "") # Shortener website for second website
