@@ -3,7 +3,7 @@ from database.ia_filterdb import Media
 from info import LOG_CHANNEL, ADMINS
 
 # ⚠️ Set your movie upload channel ID here
-SOURCE_MOVIE_CHANNEL = -6277856017   # <-- Change this
+SOURCE_MOVIE_CHANNEL = -1003269588765   # <-- Change this
 
 
 # Helper: Safe send message
