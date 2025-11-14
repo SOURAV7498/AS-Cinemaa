@@ -5,50 +5,69 @@ from info import LOG_CHANNEL, ADMINS
 # ⚠️ Set your movie upload channel ID here
 SOURCE_MOVIE_CHANNEL = -1002837138676   # <-- Change this
 
+
+# Helper: Safe send message
+async def safe_send(client, chat_id, text):
+    try:
+        await client.send_message(chat_id, text)
+    except Exception as e:
+        print(f"Failed to send message to {chat_id}: {e}")
+
+
 @Client.on_message(filters.channel & filters.chat(SOURCE_MOVIE_CHANNEL))
 async def new_movie_handler(client, message):
 
+    print("📥 Handler triggered for message:", message.id)   # Debug log
+
     if not message.media:
+        print("❌ No media found")
         return
 
-    # Detect media type
-    file_id = (
-        message.video.file_id if message.video else
-        message.document.file_id if message.document else
-        message.audio.file_id if message.audio else
-        None
-    )
+    # ---- FIXED UNIVERSAL MEDIA DETECTION ----
+    media_obj = getattr(message, message.media.value, None)
+    file_id = getattr(media_obj, "file_id", None)
 
     if not file_id:
+        print("❌ Media has no file_id")
         return
 
-    # Check if media exists
+    print("📌 File ID detected:", file_id)
+
+    # ---- CHECK IF FILE ALREADY EXISTS ----
     exists = await Media.file_exists(file_id)
+    print("🔍 Exists in DB:", exists)
     if exists:
         return
 
-    # Save the new media
+    # ---- SAVE MEDIA ----
+    caption = message.caption or "New Movie"
+
     await Media.add_media(
         file_id=file_id,
-        file_name=message.caption or "New Movie",
+        file_name=caption,
         message_id=message.id,
         chat_id=SOURCE_MOVIE_CHANNEL
     )
 
-    # Notification message
-    caption = message.caption or "No title available"
     notify_text = (
         f"🎬 **New Movie Added!**\n\n"
         f"📌 **Title:**\n`{caption}`\n\n"
         f"🎞 **File ID:**\n`{file_id}`"
     )
 
-    # Send alert to log channel
-    await client.send_message(LOG_CHANNEL, notify_text)
+    # ---- SEND TO LOG CHANNEL ----
+    print("📨 Sending to LOG_CHANNEL...")
+    await safe_send(client, LOG_CHANNEL, notify_text)
 
-    # Notify admins
+    # ---- SEND TO ADMINS ----
+    print("📨 Notifying admins...")
     for admin in ADMINS:
         try:
-            await client.send_message(int(admin), notify_text)
+            admin_id = int(admin)
         except:
-            pass
+            print(f"⚠️ Invalid admin ID: {admin}")
+            continue
+
+        await safe_send(client, admin_id, notify_text)
+
+    print("✅ Notification process completed.")
