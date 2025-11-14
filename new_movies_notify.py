@@ -3,7 +3,7 @@ from database.ia_filterdb import Media
 from info import LOG_CHANNEL, ADMINS
 
 # ⚠️ Set your movie upload channel ID here
-SOURCE_MOVIE_CHANNEL = -1001234567890   # <-- Change this
+SOURCE_MOVIE_CHANNEL = 1002837138676   # <-- Change this
 
 @Client.on_message(filters.channel & filters.chat(SOURCE_MOVIE_CHANNEL))
 async def new_movie_handler(client, message):
