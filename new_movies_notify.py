@@ -59,15 +59,20 @@ async def new_movie_handler(client, message):
     print("📨 Sending to LOG_CHANNEL...")
     await safe_send(client, LOG_CHANNEL, notify_text)
 
-    # ---- SEND TO ADMINS ----
+    # ---- SEND TO ADMINS ---
     print("📨 Notifying admins...")
     for admin in ADMINS:
-        try:
-            admin_id = int(admin)
-        except:
-            print(f"⚠️ Invalid admin ID: {admin}")
-            continue
+       try:
+        admin_id = int(admin)
+        if admin_id <= 0:
+            raise ValueError("Invalid Telegram user ID")
+    except Exception as e:
+        print(f"⚠️ Skipping invalid admin ID {admin}: {e}")
+        continue
 
-        await safe_send(client, admin_id, notify_text)
+    await safe_send(client, admin_id, notify_text)
+    
+
+   
 
     print("✅ Notification process completed.")
